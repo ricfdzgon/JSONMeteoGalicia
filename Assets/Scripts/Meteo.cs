@@ -36,7 +36,7 @@ public class Meteo : MonoBehaviour
 
             //aquí hacemos que el json se carge en el objeto
             headerMeteo = JsonUtility.FromJson<HeaderMeteo>(webRequest.downloadHandler.text);
-
+            Debug.Log("Comentario: " + headerMeteo.listaPredicions[0].comentario + "\n" + "DataActualizacion " + headerMeteo.listaPredicions[0].dataActualizacion+"\n"+"Titulo: "+headerMeteo.listaPredicions[0].titulo);
         }
     }
 }
